@@ -1,0 +1,24 @@
+{
+  "name": "poc-refresh-token",
+  "version": "1.0.0",
+  "description": "Proof of concept refresh token Node JS",
+  "main": "index.js",
+  "repository": "https://github.com/du-disk/jwt-refresh-token.git",
+  "author": "Dudi Iskandar",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7",
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "start": "nodemon exec ./src/index.js",
+    "test": "jest --coverage ./tests"
+  }
+}
