@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "e6612cc7-538b-4d1c-b9ea-d9d518483b88",
+		"name": "POC JWT Refresh Token",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ping",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNjQxNzg0MDg2LCJleHAiOjE2NDE3ODQwODZ9.hGh_CPk866UdfFkDeZokXH-R1zh5NFJK_YQwZLcIkzo",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/ping",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Secret",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNjQxNzg1NjAwLCJleHAiOjE2NDE3ODU2MDl9.iHjQaTJE7xG0rtAruhtpTNG75JU6j7_kJhmBRzBBnVA",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/secure",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"secure"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "default"
+						},
+						{
+							"key": "pasword",
+							"value": "admin",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "default"
+						},
+						{
+							"key": "pasword",
+							"value": "admin",
+							"type": "default"
+						},
+						{
+							"key": "refreshToken",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNjQxNzg1NzM5LCJleHAiOjE2NDE3ODU4MjV9.iIlMfos_FHnC1rO4G5dJL9LswKifBhCnCQo1wFCwlVQ",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/refresh-token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"refresh-token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
